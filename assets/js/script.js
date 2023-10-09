@@ -9,7 +9,8 @@ function initMap() {
     var markerOptions = {
         position: new google.maps.LatLng(30.380399007158175, -97.7152186045917),
         map: map,
-        icon: './assets/images/beer-mug.png'
+        icon: './assets/images/beer-mug.png',
+        title: 'BREWERY DB INFO HERE'
     }
 
     let marker = new google.maps.Marker(markerOptions);
