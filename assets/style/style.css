@@ -10,3 +10,12 @@ body {
 #map {
     height: 60vh;
 }
+
+/* Color Theme Swatches in Hex */
+:root {
+    --grey: #A1A2A6;
+    --navy: #024959;
+    --yellow: #F2C12E;
+    --darkyellow: #F2AE30;
+    --brown: #593E25;
+}
