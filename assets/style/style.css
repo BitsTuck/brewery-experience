@@ -19,3 +19,28 @@ body {
     --darkyellow: #F2AE30;
     --brown: #593E25;
 }
+
+
+.column {
+    border: 10px solid var(--navy);
+    border-radius: 50%;
+    padding: 10% 33% 10% 33%;
+    height: 15%;
+    width: 15%;
+
+}
+
+.container h1 {
+    font-size: 3.5em;
+    font-family:"Rock Salt";
+    line-height: 1.5em;
+}
+
+.container p {
+    font-size: 2em;
+    font-family: "Catamaran";
+}
+
+.a {
+    button-background-color:var(--navy); 
+}
