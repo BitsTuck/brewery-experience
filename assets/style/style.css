@@ -53,16 +53,28 @@ body {
     height: 100vh;
 }
 
+.results-header {
+    background-color: var(--brown);
+}
+
 .logo {
     font-family: var(--fontRS);
-    font-size: 28px;
-    /* background-image: url("../images/beer-mug-128px.png"); */
-    position: relative;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .site-logo {
-    position: absolute;
-    left: 50px;
+    position: relative;
+    top: -80px;
+    left: 80px;
+}
+
+#logo-image{
+    position: relative;
+    top: 30px;
+    left: 105px;
+    opacity: 0.5;
+    max-width: fit-content;
 }
 
 .tabs {
