@@ -18,22 +18,19 @@ function initMap() {
 };
 // the function searchbrew makes url varaible turns reponse to a json object array when entering city name
 
-function searchbrew(query) {
-    var url = 'https://api.openbrewerydb.org/v1/breweries?q=_${query}';
-    fetch (url)
-    .then(response => response.json())
-    .then((jsonData) => {
-        jsonData.map(element => element.name.city);
-         console.log(jsonData);
-    });
-    window.onload = () => {
-        var searchcityElement = document.getElementsByClassName("field");
-        searchcityElement.onkeyup = (event) => {
-            searchbrew(searchcityElement.value);
-        };
-    }
-}
+function breweryApi() {
+    var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=Austin&per_page=50`
+    fetch (brewUrl)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+        $('.test').children().eq(0).append(data[0].street)
+    })
+};
 
+breweryApi();
 
 
 
@@ -41,3 +38,12 @@ function searchbrew(query) {
 
 // Map ID: 40a6433050f67110
 // API key: AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc
+
+
+// var cityData = jsonData.map(element => element.name.city);
+// console.log(cityData);
+// });
+// window.onload = () => {
+// var searchcityElement = document.getElementsByClassName("field");
+// searchcityElement.onkeyup = (event) => {
+//     searchbrew(searchcityElement.value);
