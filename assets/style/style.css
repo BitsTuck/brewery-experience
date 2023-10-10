@@ -21,14 +21,14 @@ body {
 }
 
 
-/* .column {
+ /* .column { 
     border: 10px solid var(--navy);
     border-radius: 50%;
-    padding: 10% 33% 10% 33%;
+    padding: 10% 33% 10% 33%; 
     height: 15%;
     width: 15%;
 
-}
+} */
 
 .container h1 {
     font-size: 3.5em;
@@ -47,3 +47,4 @@ body {
 .hero-body {
     background-image: url("../images/beer-253791_1920.jpg");
 }
+
