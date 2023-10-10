@@ -16,6 +16,24 @@ function initMap() {
     let marker = new google.maps.Marker(markerOptions);
     marker.setMap(map);
 };
+// the function searchbrew makes url varaible turns reponse to a json object array when entering city name
+
+function searchbrew(query) {
+    var url = 'https://api.openbrewerydb.org/v1/breweries?q=_${query}';
+    fetch (url)
+    .then(response => response.json())
+    .then((jsonData) => {
+        jsonData.map(element => element.name.city);
+         console.log(jsonData);
+    });
+    window.onload = () => {
+        var searchcityElement = document.getElementsByClassName("field");
+        searchcityElement.onkeyup = (event) => {
+            searchbrew(searchcityElement.value);
+        };
+    }
+}
+
 
 
 
