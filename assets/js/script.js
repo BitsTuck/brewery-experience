@@ -21,7 +21,7 @@ function breweryApi() {
     .then(function (data) {
         console.log(data);
 
-        map.setCenter(new google.maps.LatLng(data[0].latitude, data[0].longitude));
+        map.setCenter(new google.maps.LatLng(data[1].latitude, data[1].longitude));
         map.setZoom(10);
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
