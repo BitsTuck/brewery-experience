@@ -19,7 +19,11 @@ function initMap() {
 // the function searchbrew makes url varaible turns reponse to a json object array when entering city name
 
 function breweryApi() {
-    var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=Austin&per_page=50`
+
+    $('.searchBtn').on('click', function(event) {
+    event.preventDefault();
+    var citySelection = $('.brewSearch').children().eq(0).val();
+    var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySelection}&per_page=50`
     
     fetch (brewUrl)
     .then(function (response) {
@@ -27,8 +31,14 @@ function breweryApi() {
     })
     .then(function (data) {
         console.log(data);
-        $('.test').children().eq(0).append(data[0].street)
     })
+
+
+    // $('.searchBtn').on('click', function(event) {
+    //     event.preventDefault();
+    //     console.log(citySelection);
+    //     console.log(brewUrl);
+    });
 };
 $('.searchBtn').on('click', function(event){
 event.preventDefault();
@@ -37,7 +47,7 @@ console.log($('.brewSearch').val());
 });
 breweryApi();
 
-
+breweryApi();
 
 
 
