@@ -24,17 +24,15 @@ body {
 
 .column-index {
     border: 10px solid var(--navy);
-    border-radius: 50%;
-    height: 30rem;
-    width: 30rem;
     padding: 5%;
+    height: 80vh;
     background-color: var(--navy);
 }
 
 .container h1 {
     word-break: keep-all;
     font-size: 3.5em;
-    font-family:"Rock Salt";
+    font-family: var(--fontRS);
     line-height: 1.5em;
     color: white;
 
@@ -42,10 +40,38 @@ body {
 
 .container p {
     word-break: keep-all;
-    font-size: 2em;
-    font-family: "Catamaran";
+    font-size: 1.5em;
+    font-family: var(--fontCat);
     font-weight:bold;
     color: white;
+    background-color: var(--navy);
+    border: solid 10px var(--navy);
+    justify-content: left;
+
+}
+
+.container ul {
+    word-break: keep-all;
+    font-size: 1.5em;
+    font-family: var(--fontCat);
+    font-weight:bold;
+    color: white;
+    background-color: var(--navy);
+    border: solid 10px var(--navy);
+}
+
+.container a {
+    color: white;
+    
+
+}
+
+.container h2 {
+    word-break: keep-all;
+    font-family: var(--fontRS);
+    font-size: 1.5em;
+    color:white;
+    line-height: 2em;
 }
 
 .hero-body {
