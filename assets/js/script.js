@@ -64,3 +64,4 @@ breweryApi();
 // var searchcityElement = document.getElementsByClassName("field");
 // searchcityElement.onkeyup = (event) => {
 //     searchbrew(searchcityElement.value);
+
