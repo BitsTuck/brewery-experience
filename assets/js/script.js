@@ -30,7 +30,17 @@ function breweryApi() {
     })
 };
 
-breweryApi();
+
+
+
+
+
+// $('.searchBtn').on('click', function(event){
+//     event.preventDefault();
+//     console.log($('.brewSearch').val());
+// });
+
+// breweryApi();
 
 
 
