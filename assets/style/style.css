@@ -21,24 +21,26 @@ body {
 }
 
 
-.column {
+.column-index {
     border: 10px solid var(--navy);
     border-radius: 50%;
     height: 30rem;
-    text-justify: center;
-    align-content: center;
-    padding: 10%;
+    width: 30rem;
+    padding: 5%;
     background-color: var(--navy);
 }
 
 .container h1 {
+    word-break: keep-all;
     font-size: 3.5em;
     font-family:"Rock Salt";
     line-height: 1.5em;
     color: white;
+
 }
 
 .container p {
+    word-break: keep-all;
     font-size: 2em;
     font-family: "Catamaran";
     font-weight:bold;
@@ -47,5 +49,8 @@ body {
 
 .hero-body {
     background-image: url("../images/beer-253791_1920.jpg");
+    height: 100vh;
 }
+
+
 
