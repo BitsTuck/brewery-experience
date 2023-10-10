@@ -20,6 +20,7 @@ function initMap() {
 
 function breweryApi() {
     var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=Austin&per_page=50`
+    
     fetch (brewUrl)
     .then(function (response) {
         return response.json();
