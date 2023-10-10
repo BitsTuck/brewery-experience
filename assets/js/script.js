@@ -19,7 +19,7 @@ function initMap() {
 // the function searchbrew makes url varaible turns reponse to a json object array when entering city name
 
 function searchbrew(query) {
-    var url = 'https://api.openbrewerydb.org/v1/breweries?q=_${query}';
+    var url = 'https://api.openbrewerydb.org/v1/breweriesby_city=san_diego&per_page=3';
     fetch (url)
     .then(response => response.json())
     .then((jsonData) => {
