@@ -31,6 +31,18 @@ function breweryApi() {
     })
     .then(function (data) {
         console.log(data);
+        for (var i = 0; i < data.length; i++) {
+            console.log(data[i].latitude, data[i].longitude);
+            var markerOptions = {
+                position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
+                map: map,
+                icon: './assets/images/beer-mug.png',
+                title: data[i].name
+            }
+        
+            let marker = new google.maps.Marker(markerOptions);
+            marker.setMap(map);
+        }
     })
 
 
