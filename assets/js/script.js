@@ -4,7 +4,7 @@ function initMap() {
         zoom: 8,
         mapId: '40a6433050f67110'
     })
-
+    
 // Custom markers
     var markerOptions = {
         position: new google.maps.LatLng(30.380399007158175, -97.7152186045917),
@@ -34,14 +34,20 @@ function breweryApi() {
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
             var markerOptions = {
+                
                 position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
                 map: map,
                 icon: './assets/images/beer-mug.png',
                 title: data[i].name
+                
             }
+            
         
             let marker = new google.maps.Marker(markerOptions);
             marker.setMap(map);
+            
+            
+           
         }
     })
 
