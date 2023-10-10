@@ -39,8 +39,5 @@ function searchbrew(query) {
 
 
 
-
-
-
 // Map ID: 40a6433050f67110
 // API key: AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc
