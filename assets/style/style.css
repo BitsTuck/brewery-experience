@@ -8,7 +8,7 @@ body {
 }
 
 #map {
-    height: 60vh;
+    height: 100vh;
 }
 
 /* Color Theme Swatches in Hex */
@@ -18,27 +18,30 @@ body {
     --yellow: #F2C12E;
     --darkyellow: #F2AE30;
     --brown: #593E25;
+    --fontRS: "Rock Salt";
+    --fontCat: "Catamaran"
 }
 
-
-.column {
+.column-index {
     border: 10px solid var(--navy);
     border-radius: 50%;
     height: 30rem;
-    text-justify: center;
-    align-content: center;
-    padding: 10%;
+    width: 30rem;
+    padding: 5%;
     background-color: var(--navy);
 }
 
 .container h1 {
+    word-break: keep-all;
     font-size: 3.5em;
     font-family:"Rock Salt";
     line-height: 1.5em;
     color: white;
+
 }
 
 .container p {
+    word-break: keep-all;
     font-size: 2em;
     font-family: "Catamaran";
     font-weight:bold;
@@ -47,5 +50,30 @@ body {
 
 .hero-body {
     background-image: url("../images/beer-253791_1920.jpg");
+    height: 100vh;
 }
 
+.logo {
+    font-family: var(--fontRS);
+    font-size: 28px;
+    /* background-image: url("../images/beer-mug-128px.png"); */
+    position: relative;
+}
+
+.site-logo {
+    position: absolute;
+    left: 50px;
+}
+
+.tabs {
+    font-family: var(--fontRS);
+}
+
+.search-refiner {
+    font-family: var(--fontCat);
+}
+
+#search-for {
+    font-weight: bold;
+    font-size: 18px;
+}

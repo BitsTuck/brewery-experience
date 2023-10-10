@@ -30,8 +30,24 @@ function breweryApi() {
         $('.test').children().eq(0).append(data[0].street)
     })
 };
+$('.searchBtn').on('click', function(event){
+event.preventDefault();
+console.log($('.brewSearch').val());
 
+});
 breweryApi();
+
+
+
+
+
+
+// $('.searchBtn').on('click', function(event){
+//     event.preventDefault();
+//     console.log($('.brewSearch').val());
+// });
+
+// breweryApi();
 
 
 
