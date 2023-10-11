@@ -1,3 +1,6 @@
+var favorites = $('.favorites');
+var brewStorage = $('.brewStorage');
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 37.0902, lng: -95.7129},
@@ -55,12 +58,26 @@ function resetMap() {
     })
 };
 
-$('.favorites').on("submit", (e) => {
-    e.preventDefault();
-    var brewName = JSON.parse(localStorage.getItem("Brewery")) || [];
-    brewName.push({brewery: input.value});
-    localStorage.setItem("Brewery", JSON.stringify(brewName));
-});
+$('.brewStorage').on('submit', function(event) {
+    event.preventDefault();
+    console.log($('.brewery').val());
+    var favInput = $('.brewery').val();
+    var brewery = JSON.parse(localStorage.getItem('Brewery'));
+    if (!brewery) {
+        brewery = [];
+    };
+    brewery.push(favInput);
+    localStorage.setItem("Brewery", JSON.stringify(brewery));
+})
+
+// brewStorage.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     var brewName = JSON.parse(localStorage.getItem("Brewery")) || [];
+//     var brew = document.getElementsByClassName("brewery");
+//     brewName.push({brew: brew.value});
+//     console.log(brewName);
+//     localStorage.setItem("Brewery", JSON.stringify(brewName));
+// });
 
 
 
