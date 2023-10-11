@@ -39,6 +39,13 @@ function breweryApi() {
     });
 };
 
+function resetMap() {
+    $('.resetMap').on('click', function(event) {
+        location.reload();
+    })
+};
+
+resetMap();
 breweryApi();
 
 
