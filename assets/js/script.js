@@ -12,7 +12,7 @@ function breweryApi() {
     $('.searchBtn').on('click', function(event) {
     event.preventDefault();
     var citySelection = $('.brewSearch').children().eq(0).val();
-    var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySelection}&per_page=50`
+    var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySelection}&per_page=100`
     
     fetch (brewUrl)
     .then(function (response) {
