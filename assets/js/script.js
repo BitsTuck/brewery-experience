@@ -55,6 +55,21 @@ function resetMap() {
     })
 };
 
+$('.favorites').on("submit", (e) => {
+    e.preventDefault();
+    var brewName = JSON.parse(localStorage.getItem("Brewery")) || [];
+    brewName.push({brewery: input.value});
+    localStorage.setItem("Brewery", JSON.stringify(brewName));
+});
+
+
+
+
+
+
+
+
+
 resetMap();
 breweryApi();
 
