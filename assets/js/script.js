@@ -22,7 +22,7 @@ function breweryApi() {
         console.log(data);
 
         map.setCenter(new google.maps.LatLng(data[1].latitude, data[1].longitude));
-        map.setZoom(10);
+        map.setZoom(12);
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
             var name = data[i].name;
