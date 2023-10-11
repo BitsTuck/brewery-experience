@@ -1,7 +1,7 @@
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 30.261407876987132, lng: -97.74064430143332},
-        zoom: 8,
+        center: {lat: 37.0902, lng: -95.7129},
+        zoom: 5,
         mapId: '40a6433050f67110'
     })
     
@@ -31,6 +31,9 @@ function breweryApi() {
     })
     .then(function (data) {
         console.log(data);
+
+        map.setCenter(new google.maps.LatLng(data[0].latitude, data[0].longitude));
+        map.setZoom(10);
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
             var markerOptions = {
@@ -50,12 +53,6 @@ function breweryApi() {
            
         }
     })
-
-
-    // $('.searchBtn').on('click', function(event) {
-    //     event.preventDefault();
-    //     console.log(citySelection);
-    //     console.log(brewUrl);
     });
 };
 $('.searchBtn').on('click', function(event){
@@ -66,16 +63,6 @@ console.log($('.brewSearch').val());
 breweryApi();
 
 breweryApi();
-
-
-
-
-// $('.searchBtn').on('click', function(event){
-//     event.preventDefault();
-//     console.log($('.brewSearch').val());
-// });
-
-// breweryApi();
 
 
 
