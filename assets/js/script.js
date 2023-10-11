@@ -26,7 +26,7 @@ function breweryApi() {
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
             var name = data[i].name;
-            var url = data[i].website_url
+            var url = data[i].website_url;
             console.log(name);
             
             var markerOptions = {
@@ -37,6 +37,7 @@ function breweryApi() {
 
             let infowindow = new google.maps.InfoWindow({
                 content: name,
+                
             })
                 
             
