@@ -75,7 +75,7 @@ body {
     height: 100vh;
 }
 
-.logo {
+#logo {
     font-family: var(--fontRS);
     font-size: 30px;
     font-weight: bold;
@@ -84,12 +84,13 @@ body {
 .site-logo {
     position: relative;
     top: -80px;
-    left: 80px;
+    left: 120px;
     color: var(--brown)
 }
 
-.tabs {
+.nav {
     font-family: var(--fontRS);
+    font-weight: bold;
 }
 
 .search-refiner {
@@ -113,9 +114,8 @@ body {
 
 #logo-image{
     position: relative;
-    top: 30px;
-    left: 105px;
-    max-width: fit-content;
+    top: 15px;
+    left: 250px;
     filter: drop-shadow(0 0 0.75rem #e67038);
 }
 
