@@ -24,7 +24,7 @@ function breweryApi() {
     .then(function (data) {
         console.log(data);
         // Centers the map on the searched city by using a set coordinates within the brewery data
-        map.setCenter(new google.maps.LatLng(data[1].latitude, data[1].longitude));
+        map.setCenter(new google.maps.LatLng(data[3].latitude, data[3].longitude));
         map.setZoom(12);
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
