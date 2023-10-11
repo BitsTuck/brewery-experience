@@ -42,14 +42,8 @@ function breweryApi() {
                 content: name
                 
             })
-<<<<<<< HEAD
-                
-            
-
-=======
             // Assigns an infowindow to the brewery markers
             // When marker is clicked, the brewery name appears
->>>>>>> origin
             let marker = new google.maps.Marker(markerOptions);
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
