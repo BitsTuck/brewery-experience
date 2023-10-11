@@ -1,3 +1,4 @@
+// Sets the localStorage items to append as a list on the favorite page
 var brewery = JSON.parse(localStorage.getItem('Brewery'));
 
 console.log(brewery);
