@@ -37,6 +37,7 @@ function breweryApi() {
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
             var name = data[i].name;
+            var url = data[i].website_url
             console.log(name);
             
             var markerOptions = {
@@ -46,14 +47,15 @@ function breweryApi() {
                 icon: './assets/images/beer-mug.png',
                title: data[i].name 
             }
-            var infowindow = new google.maps.InfoWindow({
-                content: name,
+           let infowindow = new google.maps.InfoWindow({
+                content: data[i].name, 
              });
           
             let marker = new google.maps.Marker(markerOptions);
             //marker.setMap(map);
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
+                infowindow.setContent(content);
              });
            
         }
