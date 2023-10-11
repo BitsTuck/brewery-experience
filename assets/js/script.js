@@ -36,14 +36,16 @@ function breweryApi() {
             }
 
             let infowindow = new google.maps.InfoWindow({
-                content: name
+                content: name,
             })
+                
+            
 
             let marker = new google.maps.Marker(markerOptions);
             //marker.setMap(map);
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
-                infowindow.setContent(content);
+                infowindow.setContent(name);
             });
         }
     })
