@@ -93,6 +93,11 @@ body {
     font-weight: bold;
 }
 
+.nav a {
+    color: var(--navy);
+    font-weight: bold;
+}
+
 .search-refiner {
     font-family: var(--fontCat);
     color: var(--brown);
