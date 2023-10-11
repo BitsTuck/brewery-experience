@@ -36,25 +36,32 @@ function breweryApi() {
         map.setZoom(10);
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
+            var name = data[i].name;
+            console.log(name);
+            
             var markerOptions = {
                 
                 position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
                 map: map,
                 icon: './assets/images/beer-mug.png',
-                title: data[i].name
-                
+               title: data[i].name 
             }
-            
-        
+            var infowindow = new google.maps.InfoWindow({
+                content: name,
+             });
+          
             let marker = new google.maps.Marker(markerOptions);
-            marker.setMap(map);
-            
-            
+            //marker.setMap(map);
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+             });
            
         }
     })
     });
 };
+
+
 $('.searchBtn').on('click', function(event){
 event.preventDefault();
 console.log($('.brewSearch').val());
@@ -62,28 +69,9 @@ console.log($('.brewSearch').val());
 });
 breweryApi();
 
-<<<<<<< HEAD
-breweryApi();
-
-=======
->>>>>>> origin
 
 
 
 
 // Map ID: 40a6433050f67110
-<<<<<<< HEAD
 // API key: AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc
-
-
-// var cityData = jsonData.map(element => element.name.city);
-// console.log(cityData);
-// });
-// window.onload = () => {
-// var searchcityElement = document.getElementsByClassName("field");
-// searchcityElement.onkeyup = (event) => {
-//     searchbrew(searchcityElement.value);
-
-=======
-// API key: AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc
->>>>>>> origin
