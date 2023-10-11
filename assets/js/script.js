@@ -62,13 +62,17 @@ console.log($('.brewSearch').val());
 });
 breweryApi();
 
+<<<<<<< HEAD
 breweryApi();
 
+=======
+>>>>>>> origin
 
 
 
 
 // Map ID: 40a6433050f67110
+<<<<<<< HEAD
 // API key: AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc
 
 
@@ -80,3 +84,6 @@ breweryApi();
 // searchcityElement.onkeyup = (event) => {
 //     searchbrew(searchcityElement.value);
 
+=======
+// API key: AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc
+>>>>>>> origin
