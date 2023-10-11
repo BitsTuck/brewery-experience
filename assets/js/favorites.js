@@ -1,8 +1,11 @@
-var brewName = JSON.parse(localStorage.getItem("Brewery")) || [];
-console.log(localStorage);
+var brewery = JSON.parse(localStorage.getItem('Brewery'));
 
-for(var i = 0; i < brewName.length; i++) {
-    var liEl = document.createElement("li");
-    liEl.textContent = brewName[i].brewery;
-    document.querySelector("ol").append(liEl);
+console.log(brewery);
+
+for (var i = 0; i < brewery.length; i++) {
+    var breweryName = brewery[i];
+    var li = $('<li></li>');
+    li.text(breweryName);
+
+    $('.brewList').append(li);
 };
