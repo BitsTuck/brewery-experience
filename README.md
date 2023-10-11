@@ -52,6 +52,8 @@ When you find a favorite beer or brewery (or area! the world is your pint glass)
 
 To reset the map on the home page, click the Reset button below the brewery Search field.
 
+![Gif demonstrating how to use Brewery Experience](./assets/images/Brewery%20Experience.gif)
+
 
 
 ## Challenges
