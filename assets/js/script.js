@@ -4,6 +4,17 @@ function initMap() {
         zoom: 5,
         mapId: '40a6433050f67110'
     })
+    
+// Custom markers
+    var markerOptions = {
+        position: new google.maps.LatLng(30.380399007158175, -97.7152186045917),
+        map: map,
+        icon: './assets/images/beer-mug.png',
+        title: 'BREWERY DB INFO HERE'
+    }
+
+    let marker = new google.maps.Marker(markerOptions);
+    marker.setMap(map);
 };
 // the function searchbrew makes url varaible turns reponse to a json object array when entering city name
 
@@ -25,15 +36,26 @@ function breweryApi() {
         map.setZoom(10);
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
+            var name = data[i].name;
+            console.log(name);
+            
             var markerOptions = {
+                
                 position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
                 map: map,
                 icon: './assets/images/beer-mug.png',
-                title: data[i].name
+               title: data[i].name 
             }
-        
+            var infowindow = new google.maps.InfoWindow({
+                content: name,
+             });
+          
             let marker = new google.maps.Marker(markerOptions);
-            marker.setMap(map);
+            //marker.setMap(map);
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+             });
+           
         }
     })
     });
