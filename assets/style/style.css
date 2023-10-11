@@ -75,10 +75,6 @@ body {
     height: 100vh;
 }
 
-.results-header {
-    background-image: linear-gradient(white, var(--darkyellow));
-}
-
 .logo {
     font-family: var(--fontRS);
     font-size: 30px;
@@ -107,6 +103,14 @@ body {
     width: 275px;
 }
 
+.button{
+    background-color: var(--navy);
+    color: white;
+}
+#results-page {
+    background-image: linear-gradient(white, var(--darkyellow));
+}
+
 #logo-image{
     position: relative;
     top: 30px;
@@ -117,4 +121,7 @@ body {
 
 #map {
     height: 100vh;
+    width: 100vw;
+    border: 10px double var(--brown);
+    border-radius: 50%;
 }
