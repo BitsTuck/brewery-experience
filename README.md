@@ -4,7 +4,7 @@
 Version 1
 Deployed 12 October 2023
 
-<img width="1540" alt="Screenshot 2023-10-11 at 11 15 16" src="https://github.com/BitsTuck/brewery-experience/assets/144712161/35329564-c994-4c5d-9f66-d44bfce71fa1">
+<img width="1536" alt="Screenshot 2023-10-11 at 13 31 32" src="https://github.com/BitsTuck/brewery-experience/assets/144712161/03fa3a78-5948-41b9-a4e0-d2892544db60">
 
 https://bitstuck.github.io/brewery-experience/
 
@@ -15,6 +15,17 @@ Project #1 for the University of Texas at Austin specified that we create an app
 Per the assignment, we made our brewery tracker with two open-sourced APIs: the Google Maps API and the Open Brewery Database API. The aim was to enable users to enter a city name, and to be able to see local beweries in the area. This involved integrating the two APIs so that the map would display the breweries by location.
 
 There is also an About Us page, which talks about who we are and why we created this app.
+
+## User Story
+
+As a fan of breweries, I want a centralized app that tells me about local breweries in my area and around the country.
+
+WHEN I load the page,
+A map appears along with information about the application and a search bar.
+When I put in my state or city in the search bar, the map shows me breweries in the metropolitan area.
+WHEN I hover over the map marker, I am able to read information about the brewery via markers
+    INFO: Brewery type
+WHEN I find a brewery I like or want to see, I can add it to a list (localStorage)
 
 ## Installation
 
@@ -28,10 +39,38 @@ The original plan was for the user to come to a landing page, where they would t
 
 There were learning curves with Bulma, the CSS framework we selected, as well as with the APIs themselves and their combination, and then getting them to display the information we wanted. 
 
-Additionally, deciding the best way 
+Additionally, deciding the best way to effectively utilize local storage was the subject of much discussion. Ultimately our decision was made based on time constraints, as opposed to the ideal version of the app we would like to produce.
+
+## Icebox Items:
+<ul>
+<li>A modal that asks users' age (21+) before they enter the site</li>
+<li>Search by zip code</li>
+<li>Rating system</li>
+<li>Find breweries by user location</li>
+<li>Ability to give driving/walking directions</li>
+</ul>
+
+
 ## Credits
 
-Additional guidance was given by instructor Leah Nelson and TA Diem Ly in office hours. Tutor Dru Sanchez also provided guidance.
+Brewery Experience was a collaboration between Michael Tritsch, Libby You, Martin Sandoval, and Elizabeth Tucker. 
+<ul>
+<li><a href="https://bulma.io/" target=_blank>Bulma</a> was our CSS framework.</li>
+<li>Our colors were selected from <a href="https://color.adobe.com/explore" target=_blank>Adobe Color</a>.</li>
+<li>Our fonts are Rock Salt and Catamaran, selected through <a href="https://fontjoy.com" target=_blank>FontJoy</a> and provided by <a href="https://fonts.google.com/" target=_blank>Google Fonts</a>.</li>
+<li>We used the <a href="https://developers.google.com/maps" target=_blank>Google Maps API</a>.</li>
+<li>We used the <a href="https://www.openbrewerydb.org/" target=_blank>Open Brewery Database API</a>.</li>
+<li>Images were provided by <a href="https://pixabay.com/photos/beer-lemonade-drops-water-fresh-253791/" target=_blank>Pixabay</a>.</li>
+<li>Icons were provided by <a href="https://www.flaticon.com/free-icons/beer" title="beer icons">Beer icons created by Good Ware - Flaticon</a></li>
+</ul>
+JavaScript and JQuery made our site great.
+
+
+
+## Initial Wireframes 
+![2_720](https://github.com/BitsTuck/brewery-experience/assets/144712161/d5e11df5-6349-44f5-8f14-4be689bd8852)
+![3_720](https://github.com/BitsTuck/brewery-experience/assets/144712161/85c38ac3-fbd1-49f6-97b9-1274af9111a6)
+![1_720](https://github.com/BitsTuck/brewery-experience/assets/144712161/fd048c46-5c90-42df-8313-131a502b6814)
 
 
 
@@ -40,33 +79,3 @@ Additional guidance was given by instructor Leah Nelson and TA Diem Ly in office
 Please refer to the license in the repo.
 
 ---
-
-
-# Pseudo-code/User Story
-
-As a fan of breweries, I want a centralized app that tells me about local breweries in my area and around the country.
-
-WHEN I load the page,
-A map appears along with information about the application and a search bar.
-When I put in my state or city in the search bar, the map shows me breweries in the metropolitan area.
-WHEN I hover over the map marker, I am able to read information about the brewery via markers
-    INFO: Brewery type
-WHEN I find a brewery I like or want to see, I can add it to a list (localStorage)
-
-ICEBOX ITEMS:
--21+ modal
--Zip code search
--Rating system
--About us/who we are
--Random brewery generator
--Find my location, walking directions
-
-COLOR CODES: 
-
-Color Theme Swatches in Hex
-.GIN&TONIC---interior-design-/-2018-1-hex { color: #A1A2A6; }
-.GIN&TONIC---interior-design-/-2018-2-hex { color: #024959; }
-.GIN&TONIC---interior-design-/-2018-3-hex { color: #F2C12E; }
-.GIN&TONIC---interior-design-/-2018-4-hex { color: #F2AE30; }
-.GIN&TONIC---interior-design-/-2018-5-hex { color: #593E25; }
-
