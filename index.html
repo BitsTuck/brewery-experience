@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,40 +10,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
-
 <body>
-    <div class="hero-body">
-        <div class="container">
-            <div class="column is-three-fifths is-offset-one-fifth has-text-centered column-index">
-                <div class="container">
-                    <div class="column is-12">
-                        <h1 class="title">
-                            About Us.
-                        </h1>
-                    </div>
-                    <div class="column is-12">
-                        <p class="textarea has-text-justified">
-                            Beer Experience is Project #1 from Michael Tritsch, Libby You, Martin Sandoval, and
-                            Elizabeth Tucker. We are students in the University of Texas at Austin's Full Stack Coding
-                            Bootcamp, fall 2023.
-                        </p>
-                    </div>
-                    <div class="column is-12">
-                        <ul>
-                            <li><a href="https://github.com/MikeTritsch" target=_blank>Check out Michael's Github</a>
-                            </li>
-                            <li><a href="https://github.com/libbyou" target=_blank>Check out Libby's Github</a></li>
-                            <li><a href="https://github.com/martinsandoval007" target=_blank>Check out Martin's
-                                    Github</a></li>
-                            <li><a href="https://github.com/BitsTuck" target=_blank>Check out Elizabeth's Github</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h2>Thanks for stopping by. Next one's on us.</h2>
 
-                </div>
+    <div id="results-page">
+        <header>
+        
+            <div class="columns is-multiline is-mobile">
+                <section class="column m-4">
+                    <div class="nav is-underlined">
+                        <h2><a href="./index.html">About Us</a></h2>
+                    </div>
+                    <div class="search-refiner">
+                        <div class="field has-addons mt-5 pl-auto">
+                            <form class="brewSearch">
+                                <input class="input" type="text" placeholder="Enter a city">
+                                <div class="control buttons has-addons">
+                                <button class="button searchBtn">Search</button>
+                                <button class="button resetMap">Reset Map</button>
+                                </div>
+                            </form>
+                        </div>    
+                    </div>   
+                       
+                       
+                        <!-- Code for a functionality we would like to add in later -->
+                        <!-- <label class="checkbox pr-2 py-2">
+                            <input type="checkbox">
+                            Micro
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Nano
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Regional
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Brewpub
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Large
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Planning
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Bar
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Contract
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Proprieter
+                        </label>
+                        <label class="checkbox p-2">
+                            <input type="checkbox">
+                            Closed
+                        </label> -->
+        
+                </section>
+
+                <section class="column is-half">
+                    <div id="logo">
+                        <img id="logo-image" src="./assets/images/beer-mug-128px.png">
+                        <h1 class="site-logo">Brewery Experience</h1>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="m-4 column">
+                        <div class="nav is-underlined has-text-right">
+                            <h2><a href="./index.html">Your Favorites</a><h2>
+                        </div>
+                        <div class="field has-addons mt-5 pl-auto">
+                            <form class="brewStorage">
+                                <input class="brewery input" type="text" placeholder="Save Your Favorites">
+                                <button type="submit" class="favorites button">Save to Favorites</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+
             </div>
-        </div>
+        </header>
+        <main>
+            <!-- Div that holds the map -->
+            <div id="map"></div>
+            <div class="test">
+                <h1 class="append-test"></h1>
+            </div>
+        </main>
     </div>
 
 
@@ -59,17 +122,15 @@
 
 
 
-    <!-- Script.js link -->
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <!-- Google Maps API JS Link -->
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc&callback=initMap">
-        </script>
-</body>
 
-</html>
-</body>
-<script src="./assets/js/script.js"></script>
+<!-- JQuery Link -->
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-
+<!-- Script.js link -->
+<script src="./assets/js/script.js"></script>   
+<!-- Google Maps API JS Link -->
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc&map_ids=40a6433050f67110&callback=initMap">
+</script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</body>
 </html>
