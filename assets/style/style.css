@@ -1,16 +1,3 @@
-html {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-#map {
-    height: 100vh;
-}
-
 /* Color Theme Swatches in Hex */
 :root {
     --grey: #A1A2A6;
@@ -20,6 +7,15 @@ body {
     --brown: #593E25;
     --fontRS: "Rock Salt";
     --fontCat: "Catamaran"
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .column-index {
@@ -80,7 +76,7 @@ body {
 }
 
 .results-header {
-    background-color: var(--brown);
+    background-image: linear-gradient(white, var(--darkyellow));
 }
 
 .logo {
@@ -93,14 +89,7 @@ body {
     position: relative;
     top: -80px;
     left: 80px;
-}
-
-#logo-image{
-    position: relative;
-    top: 30px;
-    left: 105px;
-    opacity: 0.5;
-    max-width: fit-content;
+    color: var(--brown)
 }
 
 .tabs {
@@ -109,9 +98,23 @@ body {
 
 .search-refiner {
     font-family: var(--fontCat);
+    color: var(--brown);
+    font-size: 17px;
+    font-weight: bold;
 }
 
-#search-for {
-    font-weight: bold;
-    font-size: 18px;
+.input {
+    width: 275px;
+}
+
+#logo-image{
+    position: relative;
+    top: 30px;
+    left: 105px;
+    max-width: fit-content;
+    filter: drop-shadow(0 0 0.75rem #e67038);
+}
+
+#map {
+    height: 100vh;
 }

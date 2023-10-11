@@ -23,7 +23,7 @@ function breweryApi() {
     $('.searchBtn').on('click', function(event) {
     event.preventDefault();
     var citySelection = $('.brewSearch').children().eq(0).val();
-    var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySelection}&per_page=50`
+    var brewUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySelection}&per_page=100`
     
     fetch (brewUrl)
     .then(function (response) {
@@ -32,7 +32,7 @@ function breweryApi() {
     .then(function (data) {
         console.log(data);
 
-        map.setCenter(new google.maps.LatLng(data[0].latitude, data[0].longitude));
+        map.setCenter(new google.maps.LatLng(data[1].latitude, data[1].longitude));
         map.setZoom(10);
         for (var i = 0; i < data.length; i++) {
             console.log(data[i].latitude, data[i].longitude);
@@ -61,12 +61,13 @@ function breweryApi() {
     });
 };
 
+function resetMap() {
+    $('.resetMap').on('click', function(event) {
+        location.reload();
+    })
+};
 
-$('.searchBtn').on('click', function(event){
-event.preventDefault();
-console.log($('.brewSearch').val());
-
-});
+resetMap();
 breweryApi();
 
 
