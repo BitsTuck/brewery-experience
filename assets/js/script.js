@@ -1,17 +1,17 @@
-var favorites = $('.favorites');
-var brewStorage = $('.brewStorage');
-
+// Calling the Google Maps API
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 37.0902, lng: -95.7129},
         zoom: 5,
+        // Custom MAP ID with selected POIs removed and custom colors
         mapId: '40a6433050f67110'
     })
 };
-// the function searchbrew makes url varaible turns reponse to a json object array when entering city name
 
+// Open Brewery DB API call
 function breweryApi() {
 
+    // Event listener on the search input button to gather breweries by city (SEE: ${citySelection})
     $('.searchBtn').on('click', function(event) {
     event.preventDefault();
     var citySelection = $('.brewSearch').children().eq(0).val();
@@ -23,7 +23,7 @@ function breweryApi() {
     })
     .then(function (data) {
         console.log(data);
-
+        // Centers the map on the searched city by using a set coordinates within the brewery data
         map.setCenter(new google.maps.LatLng(data[1].latitude, data[1].longitude));
         map.setZoom(12);
         for (var i = 0; i < data.length; i++) {
@@ -31,22 +31,26 @@ function breweryApi() {
             var name = data[i].name;
             
             console.log(name);
-            
+            // Placing the custom mug markers to denote breweries within the designated city
             var markerOptions = {
                 position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
                 map: map,
                 icon: './assets/images/beer-mug.png',
             }
-
+            // Info window text content
             let infowindow = new google.maps.InfoWindow({
                 content: name
                 
             })
+<<<<<<< HEAD
                 
             
 
+=======
+            // Assigns an infowindow to the brewery markers
+            // When marker is clicked, the brewery name appears
+>>>>>>> origin
             let marker = new google.maps.Marker(markerOptions);
-            //marker.setMap(map);
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
                 infowindow.setContent(content);
@@ -56,12 +60,14 @@ function breweryApi() {
     });
 };
 
+// General page reload function to clear the map
 function resetMap() {
     $('.resetMap').on('click', function(event) {
         location.reload();
     })
 };
 
+// localStorage functionality
 $('.brewStorage').on('submit', function(event) {
     event.preventDefault();
     console.log($('.brewery').val());
@@ -74,29 +80,5 @@ $('.brewStorage').on('submit', function(event) {
     localStorage.setItem("Brewery", JSON.stringify(brewery));
 })
 
-// brewStorage.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     var brewName = JSON.parse(localStorage.getItem("Brewery")) || [];
-//     var brew = document.getElementsByClassName("brewery");
-//     brewName.push({brew: brew.value});
-//     console.log(brewName);
-//     localStorage.setItem("Brewery", JSON.stringify(brewName));
-// });
-
-
-
-
-
-
-
-
-
 resetMap();
 breweryApi();
-
-
-
-
-
-// Map ID: 40a6433050f67110
-// API key: AIzaSyAgUNZngbasW9LtIjfNm5M_ICxJxjlCIkc

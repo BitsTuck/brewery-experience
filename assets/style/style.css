@@ -113,6 +113,7 @@ body {
     background-color: var(--navy);
     color: white;
 }
+
 #results-page {
     background-image: linear-gradient(white, var(--darkyellow));
 }
